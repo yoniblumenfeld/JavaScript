@@ -2,23 +2,19 @@
 console.log(bubbleSort([-4,0,-2,3,6,4,-3]));
 
 function bubbleSort(arr) {
-    let min;
-    let original_length = arr.length;
-    let new_arr = [];
-    while (new_arr.length != original_length) {
-        let min_index = 0;
-        min=arr[0];
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min_index = i;
-                min = arr[i];
+    let is_sorted=false
+    while (!is_sorted) {
+        is_sorted=true
+        for (let i = 0; i < arr.length-1; i++) {
+            if (arr[i] > arr[i+1]) {
+                let tmp_arr = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = tmp_arr;
+                is_sorted=false;
             }
 
         }
-        new_arr.push(min);
-        arr=arr.slice(0,min_index).concat(arr.slice(min_index+1,arr.length));
-
     }
-    return new_arr;
 
+    return arr;
 }
