@@ -5,7 +5,7 @@ function current_array_combos(arr)
 {
     var combos=[];
     var temp_str="";
-    for(var i=0;i<arr.length;i++)
+    for(let i=0;i<arr.length;i++)
     {
         temp_str += arr[i];
         combos.push(temp_str);
@@ -21,7 +21,7 @@ function all_possible_combos(x)
     for(var i=0;i<x.length;i++)
     {
         (function current_index_to_first(){
-            var current_first=tmp_arr[0];
+            let current_first=tmp_arr[0];
             tmp_arr=tmp_arr.split("");
             tmp_arr[0]=tmp_arr[i];
             tmp_arr[i] = current_first;
