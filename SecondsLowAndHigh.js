@@ -1,4 +1,4 @@
-
+"use strict";
 console.log(second_low_and_high([1,2,3,4,5,0]))
 
 function second_low_and_high(arr){

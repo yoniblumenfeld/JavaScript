@@ -1,4 +1,4 @@
-
+"use strict";
 var obj = {
     name:"MyObj",
     age:1,

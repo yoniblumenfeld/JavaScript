@@ -1,4 +1,4 @@
-
+"use strict";
 console.log(bubbleSort([-4,0,-2,3,6,4,-3]));
 
 function bubbleSort(arr) {
