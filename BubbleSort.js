@@ -7,9 +7,10 @@ function bubbleSort(arr) {
         is_sorted=true
         for (let i = 0; i < arr.length-1; i++) {
             if (arr[i] > arr[i+1]) {
-                let tmp_arr = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = tmp_arr;
+                [arr[i],arr[i+1]]=[arr[i+1],arr[i]]; // smarter swap using destructing - ES6
+                //let tmp_arr = arr[i];
+                //arr[i] = arr[i+1];
+                //arr[i+1] = tmp_arr;
                 is_sorted=false;
             }
 

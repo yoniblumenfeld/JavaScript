@@ -11,6 +11,6 @@ function list_object_properties() {
     Object.keys(this).forEach(function list_properties(x) {
         console.log(x);
     }) // using forEach
-
+    
     for(let k of Object.keys(this)){console.log(k);} // using for..of
 }
