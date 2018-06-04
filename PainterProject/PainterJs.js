@@ -1,4 +1,9 @@
 var color="#rgb(255,255,255)";
+var draw_now=false;
+var [mainX,mainY]=[0,0];
+var promises=[];
+
+//setInterval(executePromises,5);
 
 var wait_for_load = new Promise(function (resolve,reject) {
     return window.onload=function () {
@@ -7,11 +12,23 @@ var wait_for_load = new Promise(function (resolve,reject) {
         resolve();
     }
 }).then(function (resolve,reject) {
+
+    let rect=canvas.getBoundingClientRect();
     let cvs = document.getElementById("canvas");
-    alert(cvs.id);
+    let ctx=cvs.getContext("2d");
+    cvs.addEventListener("mouseup",function (evt) {
+      draw_now=false;
+    });
+    cvs.addEventListener("mouseout",function (evt) {
+        draw_now=false;
+    });
+    cvs.addEventListener("mousemove",function (evt) {
+        draw(getMousePos(rect,evt),ctx);
+    });
     cvs.addEventListener("mousedown",function (evt) {
-        draw(getMousePos(cvs,evt),cvs);
-    })
+        draw_now=true;
+    });
+
 });
 
 function loadColorPalette(){
@@ -25,23 +42,26 @@ function loadColorPalette(){
     }
 }
 
+function executePromises() {
+    Promise.all(promises);
+}
 
-function draw(pos,canvas){
-    ctx = canvas.getContext("2d");
-    ctx.fillStyle=color;
-    ctx.fillRect(pos.x,pos.y,2,2);
+function draw([x,y],ctx){
+    ctx.fillStyle = color;
+    if (draw_now===true) {
+        ctx.fillRect(x, y, 3, 3);
+    }
 }
 function changeColor(x){
     color=x;
-    alert(x);
 }
 
 
-function getMousePos(canvas,evt)
+function getMousePos(rect,evt)
 {
-    var rect=canvas.getBoundingClientRect();
-    return {x:evt.clientX-rect.left,y:evt.clientY-rect.top};
+    return [evt.clientX-rect.left,evt.clientY-rect.top];
 }
+
 /*function drawColor() {
     let canvas = document.getElementById("canvas");
     let draw_obj = canvas.getContext("2d");

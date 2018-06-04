@@ -1,0 +1,32 @@
+body{
+    font-family: "Segoe UI";
+}
+.painterDivs{
+    height: 3px;
+    width:3px;
+    float: left;
+    background-color: green;
+}
+.ColorPalette {
+    padding: 50px;
+
+}
+#black_palette{
+    background-color: black;
+}
+
+#blue_palette{
+    background-color: blue;
+}
+
+#yellow_palette{
+    background-color: yellow;
+}
+
+#red_palette{
+    background-color: red;
+}
+
+#green_palette{
+    background-color: green;
+}
