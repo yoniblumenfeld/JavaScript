@@ -1,5 +1,6 @@
 
-console.log(all_possible_combos("dog"))
+console.log(all_possible_combos("shayblumenfeldespircom26011968*-"));
+
 
 function current_array_combos(arr)
 {
