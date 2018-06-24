@@ -1,11 +1,10 @@
-var color="#rgb(255,255,255)";
-var draw_now=false;
-var [mainX,mainY]=[0,0];
-var promises=[];
+let color="#rgb(255,255,255)";
+let draw_now=false;
+let promises=[];
 
 //setInterval(executePromises,5);
 
-var wait_for_load = new Promise(function (resolve,reject) {
+let wait_for_load = new Promise(function (resolve,reject) {
     return window.onload=function () {
         alert("done loading!");
         loadColorPalette();

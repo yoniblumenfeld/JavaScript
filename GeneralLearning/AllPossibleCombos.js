@@ -1,11 +1,6 @@
-
-console.log(all_possible_combos("shayblumenfeldespircom26011968*-"));
-
-
 function current_array_combos(arr)
 {
-    var combos=[];
-    var temp_str="";
+    let combos=[],temp_str="";
     for(let i=0;i<arr.length;i++)
     {
         temp_str += arr[i];
@@ -17,9 +12,8 @@ function current_array_combos(arr)
 
 function all_possible_combos(x)
 {
-    var combos=[];
-    var tmp_arr=x;
-    for(var i=0;i<x.length;i++)
+    let combos=[],tmp_arr=x;
+    for(let i=0;i<x.length;i++)
     {
         (function current_index_to_first(){
             let current_first=tmp_arr[0];
@@ -35,3 +29,5 @@ function all_possible_combos(x)
     }
     return combos;
 }
+
+console.log(all_possible_combos("PpAaSsWwOoRrDd123456"));

@@ -1,4 +1,4 @@
-var a = 1;
+let a = 1;
 function *fn() {
     while (true) {
         a++;
@@ -10,7 +10,7 @@ function incGen(){
     this.next();
     return a;
 }
-var it = fn();
+let it = fn();
 console.log(incGen.call(it));
 
 //incGen.call(it);

@@ -1,7 +1,7 @@
 
-var costumeIterator = {
+let costumeIterator = {
     [Symbol.iterator]() {
-        var n1 = 1,
+        let n1 = 1,
             n2 = 2;
         return {
             [Symbol.iterator]() {
@@ -24,7 +24,7 @@ var costumeIterator = {
 };
 
 
-var it = costumeIterator[Symbol.iterator]();
+let it = costumeIterator[Symbol.iterator]();
 
 for (let i = 0; i < 101; i++) {
     console.log(it.next().value);

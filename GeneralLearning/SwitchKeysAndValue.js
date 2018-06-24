@@ -1,11 +1,11 @@
 "use strict";
-var test_obj = Object.create(null);
+let test_obj = Object.create(null);
 test_obj={
     you:"1",
     me:"2"
 };
 console.log(switchKeysAndValue.call(test_obj));
-console.log(test_obj)
+console.log(test_obj);
 function switchKeysAndValue()
 {
     let new_obj=Object.create(null);

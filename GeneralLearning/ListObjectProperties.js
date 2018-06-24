@@ -1,5 +1,5 @@
 "use strict";
-var obj = {
+let obj = {
     name:"MyObj",
     age:1,
     size:10

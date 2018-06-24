@@ -17,9 +17,9 @@ if(!Promise.map) {
         return Promise.all(arr);
     }
 }
-var p1 = Promise.resolve( 21 );
-var p2 = Promise.resolve( 42 );
-//var p3 = Promise.reject( "Oops" );
+let p1 = Promise.resolve( 21 );
+let p2 = Promise.resolve( 42 );
+//let p3 = Promise.reject( "Oops" );
 
 
 Promise.map([p1,p2],function (x){

@@ -1,7 +1,7 @@
 "use strict";
-var chars_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+let chars_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-var books_arr = (function createThreeBooksArray() {
+let books_arr = (function createThreeBooksArray() {
     let arr=[];
     for (let i=0;i<3;i++){
         arr.push(createBook(chars_list.slice(Math.floor(Math.random()*Math.floor(chars_list.length))),chars_list.slice(Math.floor(Math.random()*Math.floor(chars_list.length)))));

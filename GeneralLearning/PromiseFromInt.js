@@ -9,7 +9,7 @@ function testNum(num) {
         else reject("Sorry not valid");
     });
 }
-var x = testNum(11).then(function (result) {
+let x = testNum(11).then(function (result) {
     console.log(Boolean(result));
     return result;
 },
@@ -18,7 +18,7 @@ var x = testNum(11).then(function (result) {
     }).then(function (data) {
     if (!!data === true){throw "NOOO"}
     else {throw "YESSS"}
-})
+});
 
 
 //Exercise 2:
@@ -31,7 +31,7 @@ var x = testNum(11).then(function (result) {
 // it should throw an error.
 
 
-var st=["a","c","b","f","e"];
+let st=["a","c","b","f","e"];
 makeAllCaps(st).then(sortWords).then(function (arr) {
     console.log(arr);
 });
