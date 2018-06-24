@@ -41,4 +41,4 @@ console.log(object_2.b);
 object_2.c = 5;
 console.log(object_1.c);
 
-console.log("Circularity checked biatchhhhhhhhh".repeat(5));
+console.log("Circularity checked".repeat(5));
